@@ -11,8 +11,33 @@ dependencies {
         api 'io.grpc:grpc-bom:1.30.2'
         api 'com.google.protobuf:protobuf-bom:3.12.2'
         api 'org.testcontainers:testcontainers-bom:1.14.3'
+        api 'io.opentracing:parent:0.33.0'
         api 'io.zipkin.brave:brave-bom:5.12.3'
         api 'io.zipkin.reporter2:zipkin-reporter-bom:2.15.0'
+
+        // Static analysis annotations
+        api 'com.google.code.findbugs:jsr305:3.0.2'
+        api 'com.google.errorprone:error_prone_annotations:2.4.0'
+        api 'org.jetbrains:annotations:19.0.0'
+
+        // Annotation processors
+        api "org.immutables:value:$immutablesVersion"
+        api "org.immutables:gson:$immutablesVersion"
+
+        // Compile
+        api 'com.google.guava:guava:29.0-jre'
+        api 'net.sourceforge.plantuml:plantuml:1.2020.14'
+
+        // Test
+        api 'org.awaitility:awaitility:4.0.3'
+        api 'io.jaegertracing:jaeger-thrift:1.3.1'
+
+        // Jacoco
+        api "org.jacoco:org.jacoco.agent:$jacocoVersion"
+        api "org.jacoco:org.jacoco.core:$jacocoVersion"
+
+        // Checkstyle
+        api 'com.puppycrawl.tools:checkstyle:8.34'
     }
 }
 
