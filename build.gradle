@@ -1,7 +1,7 @@
 apply plugin: 'java-platform'
 
 String immutablesVersion = '2.8.8'
-String jacocoVersion = '0.8.5'
+String jacocoVersion = '0.80.8.8'
 
 dependencies {
     constraints {
