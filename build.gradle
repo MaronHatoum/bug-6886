@@ -1,0 +1,19 @@
+apply plugin: 'java-platform'
+
+String immutablesVersion = '2.8.8'
+String jacocoVersion = '0.8.5'
+
+dependencies {
+    constraints {
+        // BOMs:
+        api 'org.springframework.boot:spring-boot-dependencies:2.3.2.RELEASE'
+        api 'org.springframework.cloud:spring-cloud-sleuth-dependencies:2.2.3.RELEASE'
+        api 'io.grpc:grpc-bom:1.30.2'
+        api 'com.google.protobuf:protobuf-bom:3.12.2'
+        api 'org.testcontainers:testcontainers-bom:1.14.3'
+        api 'io.zipkin.brave:brave-bom:5.12.3'
+        api 'io.zipkin.reporter2:zipkin-reporter-bom:2.15.0'
+    }
+}
+
+configurations.runtime.dependencyConstraints.addAll(configurations.api.dependencyConstraints)
